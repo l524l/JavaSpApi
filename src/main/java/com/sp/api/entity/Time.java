@@ -34,7 +34,8 @@ public class Time {
     }
 
     public String getFormated() {
-        return formated;
+        int s = (int) Math.floor(ticks / 1000) + 6;
+        return String.format("%02d", s) + ":" + String.format("%02d", Math.round((ticks % 1000)*0.06));
     }
 
     public void setFormated(String formated) {
