@@ -1,24 +1,43 @@
 package com.sp.api;
 
+import com.google.gson.Gson;
 import com.sp.api.entity.LastChatMessages;
 import com.sp.api.entity.OnlinePlayers;
 import com.sp.api.entity.Time;
 import com.sp.api.entity.Weather;
+import com.sp.api.exception.SpApiException;
+import com.sp.api.net.*;
 
 /**
  * @Author Pershin Andrew
  */
 public class SpApi {
-    public Weather getServerWeather(){
-        return new Weather();
+    private Gson gson;
+    private SpApiHttpClient httpClient;
+
+    public SpApi() {
+        gson = new Gson();
+        httpClient = new SpApiHttpClient();
     }
-    public Time getServerTime(){
-        return new Time();
+
+    public Gson getGson() {
+        return gson;
     }
-    public OnlinePlayers getServerOnlinePlayers(){
-        return new OnlinePlayers();
+
+    public SpApiHttpClient getHttpClient() {
+        return httpClient;
     }
-    public LastChatMessages getServerLastChatMessages(){
-        return new LastChatMessages();
+
+    public Weather getServerWeather() throws SpApiException {
+        return new WeatherQuery(this).execute();
+    }
+    public Time getServerTime() throws SpApiException {
+        return new TimeQuery(this).execute();
+    }
+    public OnlinePlayers getServerOnlinePlayers() throws SpApiException {
+        return new PlayersOnlineQuery(this).execute();
+    }
+    public LastChatMessages getServerLastChatMessages() throws SpApiException {
+        return new LastChatMessagesQuery(this).execute();
     }
 }

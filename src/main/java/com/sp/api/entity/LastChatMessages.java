@@ -1,5 +1,6 @@
 package com.sp.api.entity;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -7,20 +8,33 @@ import java.util.List;
  */
 public class LastChatMessages {
 
-    public LastChatMessages(List<Message> messages) {
-        this.messages = messages;
-    }
+    private Message[] messages;
 
     public LastChatMessages() {
     }
 
-    private List<Message> messages;
+    public LastChatMessages(List<Message> messages) {
+        this.messages = (Message[]) messages.toArray();
+    }
+    public LastChatMessages(Message[] messages) {
+        this.messages = messages;
+    }
 
-    public List<Message> getMessages() {
+
+    public List<Message> getMessagesAsList() {
+        return Arrays.asList(messages);
+    }
+
+    public void setMessagesFromList(List<Message> messages) {
+        this.messages = (Message[]) messages.toArray();
+    }
+
+    public Message[] getMessages() {
         return messages;
     }
 
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
+    public void setMessages(Message[] messages) {
+        this.messages = messages.clone();
     }
+
 }

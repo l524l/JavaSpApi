@@ -4,33 +4,33 @@ package com.sp.api.entity;
  * @Author Pershin Andrew
  */
 public class Message {
-    private Player sender;
-    private String text;
+    private String name;
+    private String message;
     private long time;
 
     public Message() {
     }
 
-    public Message(Player sender, String text, long time) {
-        this.sender = sender;
-        this.text = text;
+    public Message(String name, String text, long time) {
+        this.name = name;
+        this.message = text;
         this.time = time;
     }
 
-    public Player getSender() {
-        return sender;
+    public String getSenderName() {
+        return name;
     }
 
-    public void setSender(Player sender) {
-        this.sender = sender;
+    public void setSenderName(String sender) {
+        this.name = sender;
     }
 
-    public String getText() {
-        return text;
+    public String getMessage() {
+        return message;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public long getTime() {
@@ -49,14 +49,14 @@ public class Message {
         Message message = (Message) o;
 
         if (time != message.time) return false;
-        if (!sender.equals(message.sender)) return false;
-        return text.equals(message.text);
+        if (!name.equals(message.name)) return false;
+        return this.message.equals(message.message);
     }
 
     @Override
     public int hashCode() {
-        int result = sender.hashCode();
-        result = 31 * result + text.hashCode();
+        int result = name.hashCode();
+        result = 31 * result + message.hashCode();
         result = 31 * result + (int) (time ^ (time >>> 32));
         return result;
     }

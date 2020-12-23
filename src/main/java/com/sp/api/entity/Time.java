@@ -4,25 +4,25 @@ package com.sp.api.entity;
  * @Author Pershin Andrew
  */
 public class Time {
-    private TimeOfDay timeOfDay;
+    private TimeOfDay time;
     private int ticks;
     private String formated;
 
     public Time() {
     }
 
-    public Time(TimeOfDay timeOfDay, int ticks, String formated) {
-        this.timeOfDay = timeOfDay;
+    public Time(TimeOfDay time, int ticks, String formated) {
+        this.time = time;
         this.ticks = ticks;
         this.formated = formated;
     }
 
-    public TimeOfDay getTimeOfDay() {
-        return timeOfDay;
+    public TimeOfDay getTime() {
+        return time;
     }
 
-    public void setTimeOfDay(TimeOfDay timeOfDay) {
-        this.timeOfDay = timeOfDay;
+    public void setTime(TimeOfDay time) {
+        this.time = time;
     }
 
     public int getTicks() {
@@ -49,13 +49,13 @@ public class Time {
         Time time = (Time) o;
 
         if (ticks != time.ticks) return false;
-        if (timeOfDay != time.timeOfDay) return false;
+        if (this.time != time.time) return false;
         return formated.equals(time.formated);
     }
 
     @Override
     public int hashCode() {
-        int result = timeOfDay.hashCode();
+        int result = time.hashCode();
         result = 31 * result + ticks;
         result = 31 * result + formated.hashCode();
         return result;
