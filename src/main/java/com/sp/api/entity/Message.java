@@ -1,5 +1,11 @@
 package com.sp.api.entity;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
+import java.util.UUID;
+
 /**
  * @Author Pershin Andrew
  */
@@ -7,22 +13,25 @@ public class Message {
     private String name;
     private String message;
     private long time;
+    private UUID uuid;
 
     public Message() {
     }
 
-    public Message(String name, String text, long time) {
-        this.name = name;
+    public Message(Player player, String text, long time) {
+        this.name = player.getNickname();
+        this.uuid = player.getUuid();
         this.message = text;
         this.time = time;
     }
 
-    public String getSenderName() {
-        return name;
+    public Player getSender(){
+        return new Player(name, uuid);
     }
 
-    public void setSenderName(String sender) {
-        this.name = sender;
+    public void setSender(Player player){
+        name = player.getNickname();
+        uuid = player.getUuid();
     }
 
     public String getMessage() {
@@ -33,8 +42,20 @@ public class Message {
         this.message = message;
     }
 
-    public long getTime() {
+    public LocalDateTime getTime() {
+        return LocalDateTime.of(LocalDate.ofEpochDay(time),LocalTime.ofSecondOfDay(time));
+    }
+
+    public long getTimeAsLong() {
         return time;
+    }
+
+    public void setTimeFromLong(long time) {
+        this.time = time;
+    }
+
+    public void setTime(LocalDateTime localDateTime) {
+        time = localDateTime.toLocalDate().toEpochDay();
     }
 
     public void setTime(long time) {
