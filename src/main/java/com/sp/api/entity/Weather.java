@@ -17,10 +17,6 @@ public class Weather {
         return weather;
     }
 
-    public void setWeather(WeatherType weather) {
-        this.weather = weather;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

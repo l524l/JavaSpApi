@@ -15,9 +15,6 @@ public class Message {
     private long time;
     private UUID uuid;
 
-    public Message() {
-    }
-
     public Message(Player player, String text, long time) {
         this.name = player.getNickname();
         this.uuid = player.getUuid();
@@ -25,21 +22,19 @@ public class Message {
         this.time = time;
     }
 
+    public Message(Player player, String text, LocalDateTime localDateTime) {
+        this.name = player.getNickname();
+        this.uuid = player.getUuid();
+        this.message = text;
+        this.time = localDateTime.toLocalDate().toEpochDay();
+    }
+
     public Player getSender(){
         return new Player(name, uuid);
     }
 
-    public void setSender(Player player){
-        name = player.getNickname();
-        uuid = player.getUuid();
-    }
-
     public String getMessage() {
         return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public LocalDateTime getTime() {
@@ -48,18 +43,6 @@ public class Message {
 
     public long getTimeAsLong() {
         return time;
-    }
-
-    public void setTimeFromLong(long time) {
-        this.time = time;
-    }
-
-    public void setTime(LocalDateTime localDateTime) {
-        time = localDateTime.toLocalDate().toEpochDay();
-    }
-
-    public void setTime(long time) {
-        this.time = time;
     }
 
     @Override

@@ -9,10 +9,6 @@ public class Player {
     private String nick;
     private UUID uuid;
 
-    public Player() {
-
-    }
-
     public Player(String nickname, UUID uuid) {
         this.nick = nickname;
         this.uuid = uuid;
@@ -22,16 +18,8 @@ public class Player {
         return nick;
     }
 
-    public void setNickname(String nickname) {
-        this.nick = nickname;
-    }
-
     public UUID getUuid() {
         return uuid;
-    }
-
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
     }
 
     @Override
