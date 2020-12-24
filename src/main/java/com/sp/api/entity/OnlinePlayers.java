@@ -16,9 +16,6 @@ public class OnlinePlayers {
     private int count;
     private int max;
 
-    public OnlinePlayers() {
-    }
-
     public OnlinePlayers(List<Player> players, int max) {
         this.players = (Player[]) players.toArray();
         this.count = players.size();
@@ -39,27 +36,11 @@ public class OnlinePlayers {
         return Arrays.asList(players);
     }
 
-    public void setPlayers(Player[] players) {
-        this.players = players.clone();
-    }
-
-    public void setPlayersFromList(List<Player> players) {
-        this.players = (Player[]) players.toArray();
-    }
-
     public int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
     public int getMax() {
         return max;
-    }
-
-    public void setMax(int max) {
-        this.max = max;
     }
 }
