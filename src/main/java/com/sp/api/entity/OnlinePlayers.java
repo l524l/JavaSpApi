@@ -32,7 +32,7 @@ public class OnlinePlayers {
     public Player findByUUID(UUID uuid) throws PlayerNotFoundException {
         AtomicReference<Player> player = new AtomicReference<>(null);
         getPlayersAsList().listIterator().forEachRemaining((x) -> {
-            if (x.getUuid().equals(uuid)) player.set(x);
+            if (x.getUuid() != null && x.getUuid().equals(uuid)) player.set(x);
         });
         if (player.get() == null) throw new PlayerNotFoundException();
         return player.get();
