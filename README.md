@@ -1,16 +1,30 @@
 # Java библиотека для SPM API
 Библиотека для упрощения работы с api сервера spm.
-[Introduction](#player)
 
-### Зависимости
+### Оглавление
+* [Зависимости](#depend)
+* [Установка](#install)
+* [Использование](#use)
+  * [Инициализация главного объекта](#init)
+  * [Класс Weather](#Weather)
+    * [Enum WeatherType](#WeatherType)
+  * [Класс Time](#Time)
+    * [Enum TimeOfDay](#TimeOfDay)
+  * [Класс OnlinePlayers](#OnlinePlayers)
+  * [Класс Player](#player)
+  * [Класс LastChatMessages](#LastChatMessages)
+  * [Класс Message](#Message)
+  * [Исключения](#Exception)
+
+### Зависимости <a name="depend"></a>
 * [Google GSON v.2.8.6](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6)
 * [Apache HttpClient v.4.5.13](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.13)
 * [Junit Jupiter v.5.7.0](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.7.0)
 
-### Установка
+### Установка <a name="install"></a>
 
-### Использование
-#### Инициализация главного объекта
+### Использование <a name="use"></a>
+#### Инициализация главного объекта <a name="init"></a>
 Для использования библиотеки нужно создать объект класса `SpApi`
 ```java
 SpApi spApi = new SpApi();
@@ -21,13 +35,13 @@ SpApi spApi = new SpApi();
 * getServerOnlinePlayers() - возвращает объект класса `OnlinePlayers`
 * getServerLastChatMessages() - возвращает объект класса `LastChatMessages`
 > Важно! При работе с данными методами может быть вызвано исключение `SpApiException`, которое нужно обработать.
-#### Класс Weather
+#### Класс Weather <a name="Weather"></a>
 Класс предназначен для получения погоды на сервере
 
 Список основных методов класса:
 * getWeather() - возвращает элемент enum'а `WeatherType`
 
-##### Enum WeatherType
+##### Enum WeatherType <a name="WeatherType"></a>
 Содержит значение состояния погоды:
 `CLEAR`, `RAIN`, `THUNDER`
 ##### Пример:
@@ -44,7 +58,7 @@ public static void main(String[] args){
     }
 }
 ```
-#### Класс Time
+#### Класс Time <a name="Time"></a>
 Класс предназначен для получения времени на сервере
 
 Список основных методов класса:
@@ -52,7 +66,7 @@ public static void main(String[] args){
 * getTicks() - возвращает `int` кол-во игровых тиков на сервере
 * getFormated() - возвращает `String` форматированное представление времени типа: `00:00` 
 
-##### Enum TimeOfDay
+##### Enum TimeOfDay <a name="TimeOfDay"></a>
 Содержит значение состояния времени:
 `DAY`, `NIGHT`
 
@@ -72,7 +86,7 @@ public static void main(String[] args){
     }
 }
 ```
-#### Класс OnlinePlayers
+#### Класс OnlinePlayers <a name="OnlinePlayers"></a>
 Класс предназначен для получения и работы со списком игроков которые играют на сервере в данный момент
 
 Список основных методов класса:
@@ -109,6 +123,7 @@ public static void main(String[] args){
 }
 ```
 #### Класс Player <a name="player"></a>
+
 Класс предназначен для работы с данными игрока
 
 Список основных методов класса:
@@ -135,7 +150,7 @@ public static void main(String[] args){
 }
 ```
 
-#### Класс LastChatMessages
+#### Класс LastChatMessages <a name="LastChatMessages"></a>
 Класс предназначен для работы со списком последних 50 сообщений глобального чата
 
 Список основных методов класса:
@@ -162,7 +177,7 @@ public static void main(String[] args){
 }
 ```
 
-#### Класс Message
+#### Класс Message <a name="Message"></a>
 Класс предназначен для работы с данными сообщения чата
 
 Список основных методов класса:
@@ -191,7 +206,7 @@ public static void main(String[] args){
 }
 ```
 
-#### Исключения
+#### Исключения <a name="Exception"></a>
 Список исключений:
 * SpApiException - любое исключение при работе с библиотекой
 * PlayerNotFoundException - наследует `SpApiException` исключение если игрок не найден
