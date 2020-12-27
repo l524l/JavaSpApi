@@ -58,7 +58,7 @@ public class OnlinePlayers {
     public boolean checkStatusByUUID(UUID name){
         AtomicBoolean status = new AtomicBoolean(false);
         getPlayersAsList().listIterator().forEachRemaining((x) -> {
-            if (x.getUuid().equals(name)) status.set(true);
+            if (x.getUuid() != null && x.getUuid().equals(name)) status.set(true);
         });
         return status.get();
     }
