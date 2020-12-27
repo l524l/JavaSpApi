@@ -1,4 +1,4 @@
-#Java библиотека для SPM API
+##Java библиотека для SPM API
 Библиотека для упрощения работы с api сервера spm.
 ### Зависимости
 * [Google GSON v.2.8.6](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6)
