@@ -1,5 +1,7 @@
 # Java библиотека для SPM API
 Библиотека для упрощения работы с api сервера spm.
+[Introduction](#player)
+
 ### Зависимости
 * [Google GSON v.2.8.6](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6)
 * [Apache HttpClient v.4.5.13](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.13)
@@ -106,7 +108,7 @@ public static void main(String[] args){
     }
 }
 ```
-#### Класс Player
+#### Класс Player <a name="player"></a>
 Класс предназначен для работы с данными игрока
 
 Список основных методов класса:
