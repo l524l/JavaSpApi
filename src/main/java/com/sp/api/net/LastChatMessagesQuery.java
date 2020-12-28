@@ -4,7 +4,7 @@ import com.sp.api.SpApi;
 import com.sp.api.entity.LastChatMessages;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class LastChatMessagesQuery extends ApiRequest<LastChatMessages> {
     public LastChatMessagesQuery(SpApi spApi) {

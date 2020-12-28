@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class LastChatMessages {
 

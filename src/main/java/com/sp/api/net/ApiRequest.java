@@ -8,7 +8,7 @@ import com.sp.api.exception.SpApiServerException;
 import java.lang.reflect.Type;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public abstract class ApiRequest<R> {
     private String apiMethod;

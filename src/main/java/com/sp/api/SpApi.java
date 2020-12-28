@@ -9,7 +9,7 @@ import com.sp.api.exception.SpApiException;
 import com.sp.api.net.*;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class SpApi {
     private Gson gson;

@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class SpApiHttpClient {
     private final Gson gson = new Gson();

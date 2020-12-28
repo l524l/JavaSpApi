@@ -4,7 +4,7 @@ import com.sp.api.SpApi;
 import com.sp.api.entity.Weather;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class WeatherQuery extends ApiRequest<Weather> {
     public WeatherQuery(SpApi spApi) {

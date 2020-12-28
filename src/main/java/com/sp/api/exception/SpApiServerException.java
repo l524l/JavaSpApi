@@ -1,7 +1,7 @@
 package com.sp.api.exception;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class SpApiServerException extends SpApiException {
     public SpApiServerException(String description, Throwable throwable) {

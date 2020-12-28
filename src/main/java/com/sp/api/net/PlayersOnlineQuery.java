@@ -5,7 +5,7 @@ import com.sp.api.entity.LastChatMessages;
 import com.sp.api.entity.OnlinePlayers;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class PlayersOnlineQuery extends ApiRequest<OnlinePlayers> {
     public PlayersOnlineQuery(SpApi spApi) {

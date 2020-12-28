@@ -3,7 +3,7 @@ package com.sp.api.entity;
 import java.util.UUID;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class Player {
     private String nick;

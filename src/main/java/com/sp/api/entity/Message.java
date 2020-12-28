@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class Message {
     private String name;

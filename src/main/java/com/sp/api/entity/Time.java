@@ -1,7 +1,7 @@
 package com.sp.api.entity;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class Time {
     private TimeOfDay time;

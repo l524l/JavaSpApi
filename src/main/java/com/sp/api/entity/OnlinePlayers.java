@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class OnlinePlayers {
 

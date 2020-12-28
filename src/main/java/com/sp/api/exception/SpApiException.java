@@ -3,7 +3,7 @@ package com.sp.api.exception;
 import com.sp.api.entity.Message;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class SpApiException extends Exception {
     private String description;

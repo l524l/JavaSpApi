@@ -1,7 +1,7 @@
 package com.sp.api.entity;
 
 /**
- * @Author Pershin Andrew
+ * Author Pershin Andrew
  */
 public class Weather {
     private WeatherType weather;
