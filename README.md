@@ -1,9 +1,14 @@
 # Java библиотека для SPM API
 Библиотека для упрощения работы с api сервера spm.
 
+Официальный сайт api: https://sp-api.ru/spm
+
 ### Оглавление
 * [Зависимости](#depend)
 * [Установка](#install)
+  * [Maven](#maven)
+  * [Gradle](#gradle)
+  * [Jar](#jar)
 * [Использование](#use)
   * [Инициализация главного объекта](#init)
   * [Класс Weather](#Weather)
@@ -22,7 +27,7 @@
 * [Junit Jupiter v.5.7.0](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.7.0)
 
 ### Установка <a name="install"></a>
-#### Maven
+#### Maven <a name="maven"></a>
 ```xml
 <dependency>
     <groupId>com.github.l524l</groupId>
@@ -30,7 +35,13 @@
     <version>1.0</version>
 </dependency>
 ```
-#### Jar
+#### Gradle <a name="gradle"></a>
+```groovy
+implementation 'com.github.l524l:JavaSpApi:1.0'
+```
+
+
+#### Jar <a name="jar"></a>
 Так же вы можете [скачать](https://oss.sonatype.org/service/local/repositories/releases/content/com/github/l524l/JavaSpApi/1.0/JavaSpApi-1.0.jar) jar файл и подключить его как библиотеку к своему проекту 
 
 ### Использование <a name="use"></a>
